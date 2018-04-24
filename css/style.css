@@ -1,0 +1,256 @@
+a:hover{
+	text-decoration: none;
+}
+
+.topo{
+	width: 100%;
+	height: 50px;
+	line-height: 20px; /* centraliza na vertical */
+	background-color: #f1f1f1;
+	margin: 0 auto;
+}
+
+ul.menu{
+	text-align: center;
+}
+
+ul.menu li{
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	padding: 8px 10px;
+	background: #3d7bb3;
+	border-radius: 5px;
+	outline: none;
+}
+
+ul.menu li a{
+	font-weight: lighter;
+	font-size: 16px;
+	border: 0;
+	color: white;
+}
+
+ul.menu li:hover{
+	background: white;
+	cursor: pointer;
+}
+
+ul.menu li a:hover{
+	color: #3d7bb3;
+}
+
+
+/*######################*/
+/*css menu side bar*/
+/*#####################*/
+
+.sidebar{
+	width: 15%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #34495e;
+}
+
+.title{
+	background-color: #2ecc71;
+	width: 100%;
+	height: 15%;
+}
+
+.title > img{
+	height: 50px;
+	width: 50px;
+
+	float: left;
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 15px;
+}
+
+.title > p {
+	color: white;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+
+	height: 90px;
+	line-height: 90px;
+	display: block;
+	margin-right: 15px;
+}
+
+.nav-item{
+	padding: 25px 0 15px 25px;
+	height: 25px;
+	
+	font-size: 14px;
+	color: #95a5a6;
+	letter-spacing: 1px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+
+}
+
+.nav-item > p{
+	height: 25px;
+	line-height: 25px;
+}
+
+.nav-item > img{
+	height: 25px;
+	width: auto;
+
+	float: left;
+	margin-right: 25px;
+}
+
+.nav-item:hover{
+	background-color: #243342;
+	color: white;
+	cursor: pointer;
+}
+
+
+.nav-item-upload{
+	height: 65px!important;
+}
+
+.container > h2{
+	text-align: center;
+}
+
+.table-responsive > table{
+	width: 1000px;
+	float: right;
+	margin-top: 25px;
+}
+
+
+/*srollbar*/
+::-webkit-scrollbar-track {
+	background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+	background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+	background: #dad7d7;
+}
+
+/*formulario de configurações*/
+
+#formulario{
+	width: 500px;
+	margin: 100px auto;
+	text-align: center;
+	position: relative;
+}
+
+#formulario > fieldset{
+	background: white;
+	border: 1px #ccc solid;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	box-shadow: 0 0 15px 1px rgba(0,0,0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	position: absolute;
+}
+
+#formulario > fieldset:not(:first-of-type){
+	display: none;
+}
+
+#formulario input, #formulario textarea{
+	padding: 10px;
+	border: 1px solid rgba(38, 128, 101, 0.9);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
+	font: 14px "Trebuchet MS" tahome, arial;
+	color: #090;
+	margin-bottom: 10px;
+}
+
+#formulario .acao{
+	width: 100px;
+	background: #27ae60;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 12px 0;
+	float: left;
+	margin-right: 5%;
+}
+
+#formulario .acao:hover{
+	background: rgba(52, 177, 140, 0.9);
+	cursor: pointer;
+}
+
+#formulario #progress{
+	margin-bottom: 20px;
+	overflow: hidden;
+
+	counter-reset: step;
+}
+
+#progress > li{
+	list-style-type: none;
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+	float: left;
+	width: 33.33%;
+	position: relative;
+}
+
+#progress > li:before{
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	display: block;
+	line-height: 20px;
+	background: green;
+	color: white;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+
+	margin: 0 auto 10px auto;
+}
+
+#progress > li:after{
+	content: '';
+	width: 100%;
+	background: black;
+	height: 2px;
+	position: absolute;
+	top: 9px;
+	left: -50%;
+	z-index: -1;
+}
+
+#progress > li:first-child:after{
+	content: none;
+}
+
+#progress > li.ativo:before, #progress > li.ativo:after{
+	background-color: #069;
+	color: white;
+	text-shadow: 0.9;
+}
